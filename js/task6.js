@@ -1,7 +1,7 @@
 let button = document.querySelector("#button");
 let inputText = document.querySelector("#input-text");
 let textBlock = document.querySelector("#text-block");
-
+let exchangeRate = document.querySelector("#exchangeRate");
 button.addEventListener("click", ButtonClick);
 
 function ButtonClick() {
@@ -11,12 +11,24 @@ function ButtonClick() {
     textBlock.innerHTML = "Неправельно введены данные.";
     return;
   }
-  let tmp = number;
-  let invertedNumber = 0;
-  do {
-    invertedNumber = invertedNumber * 10 + (tmp % 10);
-    tmp = Math.floor(tmp / 10);
-  } while (tmp);
-  textBlock.innerHTML =
-    number == invertedNumber ? "Число полиндром" : "Число не полиндром";
+  let changeMany;
+  let exchangeRateEUR = 0.93;
+  let exchangeRateRUB = 71.58;
+  let exchangeRateAZN = 1.7;
+  switch (String(exchangeRate.value)) {
+    case "EUR":
+      changeMany = (number * exchangeRateEUR).toFixed(2);
+      textBlock.innerHTML = `${changeMany}`;
+      break;
+    case "RUB":
+      changeMany = (number * exchangeRateRUB).toFixed(2);
+      textBlock.innerHTML = `${changeMany}`;
+      break;
+    case "AZN":
+      changeMany = (number * exchangeRateAZN).toFixed(2);
+      textBlock.innerHTML = `${changeMany}`;
+      break;
+    default:
+      break;
+  }
 }

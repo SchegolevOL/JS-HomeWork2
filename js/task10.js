@@ -7,8 +7,7 @@ button.addEventListener("click", ButtonClick);
 function ButtonClick() {
   let number = String(inputText.value);
   let data = number.split("/");
-  console.log(data);
-  /*if(data[0]==NaN){
+    /*if(data[0]==NaN){
     console.log("Неправельно введены данные.")
     textBlock.innerHTML = "Неправельно введены данные."
   }

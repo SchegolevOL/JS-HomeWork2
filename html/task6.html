@@ -28,8 +28,14 @@
                 USD, выбирает, в какую валюту хочет перевести: EUR,
                 UAN или AZN, и получает в ответ соответствующую сумму.
             </div>
-            <div>Введите число:</div>
-            <input type="text" class="input-text" id="input-text" />
+            <div>Введите количество USD:</div>
+            <input type="text" class="input-text" id="input-text" />           
+            <select name="exchangeRate" id="exchangeRate">
+                <option value="EUR" >Евро</option>
+                <option value="RUB">Российского рубля</option>
+                <option value="AZN">Азербайджанский манат</option>
+              </select>
+              
             <button type="button" id="button">Расчитать</button>
             <div class="text-block" id="text-block"></div>
             <script src="../js/task6.js"></script>
