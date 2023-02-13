@@ -1,22 +1,15 @@
-let button = document.querySelector("#button");
-let inputText = document.querySelector("#input-text");
-let textBlock = document.querySelector("#text-block");
+let button1 = document.querySelector("#button1");
+let button2 = document.querySelector("#button2");
+let button3 = document.querySelector("#button3");
 
-button.addEventListener("click", ButtonClick);
+let inputTest1 = document.querySelector("#myForm1-answer1");
+let inputTest2 = document.querySelector("#myForm2");
+let inputTest3 = document.querySelector("#myForm3");
 
-function ButtonClick() {
-  let number = Number(inputText.value);
+button1.addEventListener("click", ButtonClick1);
 
-  if (number == NaN || number < 10 || number > Math.pow(2, 32)) {
-    textBlock.innerHTML = "Неправельно введены данные.";
-    return;
+function ButtonClick1() {
+  if (inputTest1.children == "checked") {
+    console.log("ggggg")
   }
-  let tmp = number;
-  let invertedNumber = 0;
-  do {
-    invertedNumber = invertedNumber * 10 + (tmp % 10);
-    tmp = Math.floor(tmp / 10);
-  } while (tmp);
-  textBlock.innerHTML =
-    number == invertedNumber ? "Число полиндром" : "Число не полиндром";
 }

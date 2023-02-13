@@ -6,7 +6,6 @@ button.addEventListener("click", ButtonClick);
 
 function ButtonClick() {
   let number = Number(inputText.value);
-
   if (number == NaN || number < 10 || number > Math.pow(2, 32)) {
     textBlock.innerHTML = "Неправельно введены данные.";
     return;
